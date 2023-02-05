@@ -1,0 +1,12 @@
+The user stories we worked with:
+As a user I want my app to automatically categorize my interests because its faster
+As a user I want to have my own login page so my interests are private
+As a user I want the app to find categorize things for me to save me time
+AS a user I want my items to be saved in the appropriate categories
+AS a user I want to be able to see all tasks/products/movies/books associated with each category
+As a user I want to be able to see where I can buy a particular product
+AS a user I want to be able to get notifications from the app to our phone
+AS a user  want to be able to list my favorites
+As a user items should not be uncategorized
+As a user I should be able to delete items I've completed or don't like
+As a user I should be to mark the tasks I have completed
