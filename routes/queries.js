@@ -3,9 +3,9 @@ const express = require('express');
 const router  = express.Router();
 
 
-router.get('/books', (req, res) => {
-  res.send('route test')
-})
+// router.get('/bo', (req, res) => {
+//   res.send('route test')
+// })
 
 
 router.get('/', (req, res) => {
@@ -69,3 +69,5 @@ const generateRandomString = function() {
 //   console.log(req.body); // Log the POST request body to the console
 //   res.send("Ok"); // Respond with 'Ok' (we will replace this)
 // })
+
+module.exports = router;
