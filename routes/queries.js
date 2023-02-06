@@ -3,8 +3,12 @@ const express = require('express');
 const router  = express.Router();
 
 
-
 router.get('/books', (req, res) => {
+  res.send('route test')
+})
+
+
+router.get('/', (req, res) => {
   res.render('books')
 })
 
