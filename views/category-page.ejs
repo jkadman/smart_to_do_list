@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Smart To-Do-List App</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <div>
+    Book List
+  </div>
+  <div>
+    <span>
+      one task in the list
+    </span>
+    <h5 class="edit-button">Edit</h5>
+    <h5 class="delete-button">Delete</h5>
+    <form action="/users/10/edit" method="POST" style="margin: auto">
+      <section>Which category do you want to add the task to?</section>
+      <span>
+        <button type="submit" class="to-watch">Movie List</button>
+        <button type="submit" class="to-read">Book List</button>
+        <button type="submit" class="to-product">Shopping List</button>
+        <button type="submit" class="to-restaurant">Eat-out List</button>
+      </span>
+    </form>
+  </div>
+</body>
+
+</html>

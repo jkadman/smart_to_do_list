@@ -7,7 +7,7 @@ $(() => {
 
     $.ajax({
       type: 'POST',
-      url: '/search', //link that will give up control in server.js
+      url: '/users/search', //link that will give up control in server.js
       data: {search: input}, //'data' key only works with object-typed key value. Data's key value = the req.body in the server
       success: function(result) {
         console.log('app.js:' + result); //result in AJAX = the value in res.send(value) sent back from the server.

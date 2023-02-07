@@ -36,9 +36,13 @@ const deleteRoute = require('./routes/to-delete');
 =======
 const queries = require('./routes/queries')
 
-const toRead = require('./routes/to-read'); //require the to-read server file
+// const toEdit = require('./routes/edit-button'); //require the to-read server file
 const toSearch = require('./routes/when-search'); //require the when-search server file
+<<<<<<< HEAD
 >>>>>>> eb43ca5ccec5ede9a12fc0d93f79d2ea796fb99e
+=======
+const toCategory = require('./routes/category-route'); //same category server file for all 4 buttons in the homepage
+>>>>>>> ea6324aa427fdea54d8156e84a4199e367120ec1
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -50,9 +54,15 @@ app.use('/users', usersRoutes);
 app.use('/api/tasks', deleteRoute);
 =======
 
+<<<<<<< HEAD
 app.use('/api/to-read', toRead); //link to the to-read category server file
 app.use('/search', toSearch); //link to the searching button server file
 >>>>>>> eb43ca5ccec5ede9a12fc0d93f79d2ea796fb99e
+=======
+// app.use('/users/:id/edit', toEdit); //link to the to-read category server file
+app.use('/users/search', toSearch); //link to the searching button server file
+app.use('/users/category', toCategory); //link to a category page for any list button
+>>>>>>> ea6324aa427fdea54d8156e84a4199e367120ec1
 // Note: mount other resources here, using the same pattern above
 
 // Home page
