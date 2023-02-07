@@ -8,21 +8,22 @@
 const express = require('express');
 const router  = express.Router();
 
+
+
+
 router.get('/', (req, res) => {
 
   res.cookie('user_id', '1');
 
-  const templateVars = {
-    username: req.cookies["username"],
-  };
+
 
   // send the user somewhere
-  res.redirect('/', templateVars);
+  res.redirect('/');
 });
 
 // router.get('/', (req, res) => {
 
-//   res.render('index');
+//   res.render('index');1
 // });
 
 
