@@ -1,4 +1,5 @@
 const axios = require('axios');
+const categorize = require('./public/scripts/categorize')
 
 // request('https://openlibrary.org/search.json?q=${user_input}', function (error, response, body) {
 //   console.error('error:', error); // Print the error if one occurred
@@ -23,23 +24,26 @@ const request2 = axios.get(urlBook)
 newArray = [];
 
 request1.then((response) => {
+  const result = response.data.results;
   newArray.push(response.data.results)
+  categorize(searchQuery2, result, book)
   // console.log(response.data.results)
 })
 request2.then((response) => {
   // console.log(response.data.docs)
+  const result = response.data.results;
   newArray.push(response.data.docs)
 })
 .then((response) => {
-  if (newArray.length > 0) {
+    if (newArray.length > 0) {
 
-    console.log('it works!')
+      console.log('it works!')
 
-    // console.log(newArray)
+      // console.log(newArray)
 
-  } else {
+    } else {
 
-    console.log('no beano')
-  }
+      console.log('no beano')
+    }
 })
 
