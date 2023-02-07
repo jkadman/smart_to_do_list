@@ -1,25 +1,27 @@
 // Client facing scripts here
 //form submission
 $(() => {
-  $("#search-form").submit(function (event) {
+  $("#search-form").submit(function (event) { //the callback is called when u click the search button
     event.preventDefault();
-    const input = $('.text').val();
+    const input = $('.text').val(); //record the input from the user
 
     $.ajax({
       type: 'POST',
-      url: '/search',
-      data: {search: input}, //only works with object
+      url: '/search', //link that will give up control in server.js
+      data: {search: input}, //'data' key only works with object-typed key value. Data's key value = the req.body in the server
       success: function(result) {
-        console.log('app.js:' + JSON.stringify(result)); //res.send(obj) obj, array, string = if statements for diferent pages!!!!
-        window.location.href = 'http://localhost:8080/api/users';
+        console.log('app.js:' + result); //result in AJAX = the value in res.send(value) sent back from the server.
+          //Value could be an obj, array, or a string => could be utilized to create if statements to direct the browser to different pages!!
+        // window.location.href = 'http://localhost:8080/api/users'; //redirect the user to the /api/users page if the request was sent successfully
       },
       error: function(err) {
-        console.log(err);
+        console.log('app.js error:', err);
       }
     });
   })
 });
 
+//below are my own note, don't bother reading it
 //e.g. of $.ajax
 // $.ajax({
 //   url: "test.html",

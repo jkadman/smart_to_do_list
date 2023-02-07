@@ -1,5 +1,4 @@
-require('dotenv').config();
-const db = require('../connection'); //like the pool variable we often use
+const db = require('../connection');
 
 const getUsers = () => {
   return db.query('SELECT * FROM users;')
@@ -7,6 +6,5 @@ const getUsers = () => {
       return data.rows;
     });
 };
-getUsers();
 
-module.exports = { getUsers }; //data.rows = an array
+module.exports = { getUsers };
