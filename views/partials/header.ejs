@@ -2,12 +2,21 @@
 
 <nav>
   <title>Smart To-Do-List App</title>
-  <section>
-    <span>To Read</span>
-    <span>To Buy</span>
-    <span>To Watch</span>
-    <span>To Eat</span>
-    <span>search</span>
-  </section>
-  <div>logged in user name</div>
+  <div class="links">
+    <div class="topnav">
+      <a class="active" href="#search">Search</a>
+      <a href="#to_read">Reading</a>
+      <a href="#to_buy">Buying</a>
+      <a href="#to_watch">Movies</a>
+      <a href="#to_eat">Eating</a>
+    </div>
+
+    <div>
+    <form method="GET" action="/users" name="username">
+      <button type="submit">login</button>
+    </form>
+    </div>
+  </div>
 </nav>
+
+
