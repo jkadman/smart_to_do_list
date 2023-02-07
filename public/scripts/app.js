@@ -8,7 +8,14 @@ $(() => {
     $.ajax({
       type: 'POST',
       url: '/search',
-      data: {search: input} //only works with object
+      data: {search: input}, //only works with object
+      success: function(result) {
+        console.log('app.js:' + JSON.stringify(result)); //res.send(obj) obj, array, string = if statements for diferent pages!!!!
+        window.location.href = 'http://localhost:8080/api/users';
+      },
+      error: function(err) {
+        console.log(err);
+      }
     });
   })
 });

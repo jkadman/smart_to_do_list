@@ -16,10 +16,10 @@ async function newBook(input) {
     return obj[ele.title];
   }
   catch (error) {
-    console.error(`asyn error: ${error}`);
+    console.error(`asyn newBook error: ${error}`);
   }
 }//return: { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
-const NewRow = async (func) => {
+const NewRow = async (func, input) => {
   let obj2 = await func;
   return db
     .query(`
@@ -27,12 +27,12 @@ const NewRow = async (func) => {
       VALUES ($1, $2, $3)
       RETURNING *;
       `,
-      [obj2.title, obj2.pubYear, 'Books'])
+      ['Books', obj2.pubYear,`${input}`])
     .then(result => {
         console.log('result.rows:',result.rows);
         return result.rows;
       })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log('NewRow fun error:', err.message));
 };
 // NewRow(); call the async func to have to working
 
