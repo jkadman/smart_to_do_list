@@ -9,7 +9,22 @@ const express = require('express');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('users');
-}); 
+
+  res.cookie('user_id', '1');
+
+  const templateVars = {
+    username: req.cookies["username"],
+  };
+
+  // send the user somewhere
+  res.redirect('/', templateVars);
+});
+
+// router.get('/', (req, res) => {
+
+//   res.render('index');
+// });
+
+
 
 module.exports = router;

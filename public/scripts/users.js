@@ -7,11 +7,11 @@ $(() => {
     })
     .done((response) => {
       const $usersList = $('#users');
-      $usersList.empty();
+      $usersList.empty(); //empty an element
 
       for(const user of response.users) {
         $(`<li class="user">`).text(user.name).appendTo($usersList);
-      }
+      } //reload all users
     });
   });
 });

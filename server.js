@@ -6,7 +6,7 @@ const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT //|| 8080;
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -28,18 +28,31 @@ app.use(express.static('public'));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const userApiRoutes = require('./routes/users-api');
+const userApiRoutes = require('./routes/users-api'); //route + data.rows
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
+<<<<<<< HEAD
 const deleteRoute = require('./routes/to-delete');
+=======
+const queries = require('./routes/queries')
+
+const toRead = require('./routes/to-read'); //require the to-read server file
+const toSearch = require('./routes/when-search'); //require the when-search server file
+>>>>>>> eb43ca5ccec5ede9a12fc0d93f79d2ea796fb99e
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
-app.use('/api/users', userApiRoutes);
+app.use('/api/users', userApiRoutes); //= when we go to the api link, we go to / with data.rows instead
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
+<<<<<<< HEAD
 app.use('/api/tasks', deleteRoute);
+=======
+
+app.use('/api/to-read', toRead); //link to the to-read category server file
+app.use('/search', toSearch); //link to the searching button server file
+>>>>>>> eb43ca5ccec5ede9a12fc0d93f79d2ea796fb99e
 // Note: mount other resources here, using the same pattern above
 
 // Home page
