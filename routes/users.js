@@ -7,13 +7,16 @@
 
 const express = require('express');
 const router  = express.Router();
+const cookieParser = require('cookie-parser')
+
+router.use(cookieParser())
 
 router.get('/', (req, res) => {
 
   res.cookie('user_id', '1');
 
   const templateVars = {
-    username: req.cookies["username"],
+    user_id: req.cookies["user_id"],
   };
 
   // send the user somewhere
@@ -22,7 +25,7 @@ router.get('/', (req, res) => {
 
 // router.get('/', (req, res) => {
 
-//   res.render('index');
+//   res.render('index');1
 // });
 
 
