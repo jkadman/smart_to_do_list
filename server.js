@@ -6,7 +6,7 @@ const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
 
-const PORT = process.env.PORT //|| 8080;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -31,7 +31,6 @@ app.use(express.static('public'));
 const userApiRoutes = require('./routes/users-api'); //route + data.rows
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
-const queries = require('./routes/queries')
 
 const toRead = require('./routes/to-read'); //require the to-read server file
 const toSearch = require('./routes/when-search'); //require the when-search server file
