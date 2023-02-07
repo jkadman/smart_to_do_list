@@ -1,0 +1,11 @@
+$font-stack: Papyrus, sans-serif;
+$primary-color: #333;
+$background-color: blue;
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+}
