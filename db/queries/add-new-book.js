@@ -27,7 +27,7 @@ const NewRow = async (func, input) => {
       VALUES ($1, $2, $3, $4)
       RETURNING *;
       `,
-      [`${obj2.pubYear}-06-06`,`${input}`, 1, '1999-06-06']) //Books has an id of 1
+      [`${obj2.pubYear}-06-06`,`${input}`, 2, '2022-06-06']) //Book category has an id of 2
     .then(result => {
         console.log('result.rows:',result.rows); //the newly inserted row = an array with one obj
         return result.rows;
