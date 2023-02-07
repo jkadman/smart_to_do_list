@@ -12,8 +12,12 @@ router.get('/', (req, res) => {
 
   res.cookie('user_id', '1');
 
+  const templateVars = {
+    username: req.cookies["username"],
+  };
+
   // send the user somewhere
-  res.redirect('/');
+  res.redirect('/', templateVars);
 });
 
 // router.get('/', (req, res) => {
