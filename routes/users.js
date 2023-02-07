@@ -7,20 +7,18 @@
 
 const express = require('express');
 const router  = express.Router();
-const cookieParser = require('cookie-parser')
 
-router.use(cookieParser())
+
+
 
 router.get('/', (req, res) => {
 
   res.cookie('user_id', '1');
 
-  const templateVars = {
-    user_id: req.cookies["user_id"],
-  };
+
 
   // send the user somewhere
-  res.redirect('/', templateVars);
+  res.redirect('/');
 });
 
 // router.get('/', (req, res) => {
