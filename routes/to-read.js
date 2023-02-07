@@ -14,4 +14,4 @@ router.get('/', (req, res) => {
     });
 });
 
-module.exports = router; //route + data.rows
+module.exports = router; //= route + data.rows = router with the .get(callback) saved into it

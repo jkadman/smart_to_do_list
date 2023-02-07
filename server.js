@@ -32,6 +32,7 @@ const userApiRoutes = require('./routes/users-api'); //route + data.rows
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
 const toRead = require('./routes/to-read');
+const toSearch = require('./routes/when-search');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -40,6 +41,7 @@ app.use('/api/users', userApiRoutes); //= when we go to the api link, we go to /
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
 app.use('/api/to-read', toRead);
+app.use('/search', toSearch);
 // Note: mount other resources here, using the same pattern above
 
 // Home page

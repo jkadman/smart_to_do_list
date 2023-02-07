@@ -3,12 +3,12 @@ require('dotenv').config(); //need this to test the query in this file
 const db = require('../connection'); //like the pool variable we often use
 const axios = require('axios');
 
-let user_input = 'Harry Potter';
+// let user_input = 'Harry Potter';
 //adding new row of book in the database
-async function newBook() {
+async function newBook(input) {
   let obj = {};
   try {
-    const response = await axios.get(`https://openlibrary.org/search.json?title=${user_input}`);
+    const response = await axios.get(`https://openlibrary.org/search.json?title=${input}`);
     let ele = response.data.docs[0];
     obj[ele.title] = {title: ele.title, pubYear: ele.first_publish_year};
     console.log('obj[ele.title]:', obj[ele.title]);
@@ -19,8 +19,8 @@ async function newBook() {
     console.error(`asyn error: ${error}`);
   }
 }//return: { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
-const NewRow = async () => {
-  let obj2 = await newBook();
+const NewRow = async (func) => {
+  let obj2 = await func;
   return db
     .query(`
       INSERT INTO categories (title, year, name)
@@ -36,4 +36,4 @@ const NewRow = async () => {
 };
 // NewRow(); call the async func to have to working
 
-module.exports = {NewRow}; //data.rows = an array
+module.exports = {newBook, NewRow}; //data.rows = an array
