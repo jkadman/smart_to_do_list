@@ -1,14 +1,14 @@
 const db = require('../connection');
 
-const deleteTask =async function(id) {
+const deleteTask = function(id) {
   const queryParam=[id];
-  await db.connect();
+
 
   return db
 
     .query(
-     `DELETE FROM tasks WHERE id = $1 RETURNIG*;`
-     
+     `DELETE FROM tasks WHERE id = $1 RETURNING*;`
+
      , queryParam)
 
     .then((result) => {
