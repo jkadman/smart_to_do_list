@@ -20,19 +20,16 @@ nav {
   flex-direction: row;
   background-color: white;
   padding-right: 0em;
-  padding-top: 3em;
   color: $primary-color;
   margin-right: 20em;
   font: $font-stack;
 
 }
 
-#login {
-  color: red;
-  }
 
 a {
   margin-right: 2em;
+  margin-top: 5em;
 }
 
 .links {
@@ -42,10 +39,12 @@ a {
 }
 
 #something {
+  color: red;
 display: flex;
 background-color: yellow;
+
 align-content: space-between;
-margin-top: 10em;
+margin-top: 2em;
 }
 
 

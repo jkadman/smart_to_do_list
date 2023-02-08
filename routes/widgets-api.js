@@ -22,7 +22,6 @@ router.get('/', (req, res) => {
         .status(500)
         .json({ error: err.message });
     });
-  res.redirect('/urls');
 });
 
 module.exports = router;
