@@ -6,13 +6,13 @@
  */
 
 const express = require('express');
-const router  = express.Router(); //as the app variable we often use, but for many files
+const router  = express.Router();
 const userQueries = require('../db/queries/users');
 
 router.get('/', (req, res) => {
   userQueries.getUsers()
     .then(users => {
-      res.json({ users }); //data.rows in json format
+      res.json({ users });
     })
     .catch(err => {
       res
@@ -21,4 +21,4 @@ router.get('/', (req, res) => {
     });
 });
 
-module.exports = router; //route + data.rows
+module.exports = router;

@@ -19,6 +19,7 @@ async function newBook(input) {
     console.error(`asyn newBook error: ${error}`);
   } //catch any error that may occur
 }//return: { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
+
 const NewRow = async (func, input) => {
   let obj2 = await func; //ob2 = { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
   return db

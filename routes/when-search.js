@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
   const newBook = await adding.newBook(user_input);
   if (newBook) { //if the task is a book; newBook = { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
     adding.NewRow(newBook, user_input); //adding a row into the database
-    return res.send('a new row belonging to the book list has been added'); //go to DevTools: inspect --> console to see the message
+    return res.send('a new row belonging to book list has been added'); //go to DevTools: inspect --> console to see the message
   }
 
   return res.send('the task doesnt belong to book category'); //if it's not a book, return this message
