@@ -31,10 +31,10 @@ app.use(express.static('public'));
 const userApiRoutes = require('./routes/users-api'); //route + data.rows
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
-
+const toRead= require('./routes/to_read');
 const deleteRoute = require('./routes/to-delete');
 
-const queries = require('./routes/queries')
+//const queries = require('./routes/queries')
 
 // const toEdit = require('./routes/edit-button'); //require the to-read server file
 const toSearch = require('./routes/when-search'); //require the when-search server file
@@ -50,10 +50,11 @@ app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
 
 app.use('/api/tasks', deleteRoute);
+//app.use('/api/queries',queries);
 
 
 
-app.use('/api/to-read', toRead); //link to the to-read category server file
+//app.use('/api/to-read', toRead); //link to the to-read category server file
 app.use('/search', toSearch); //link to the searching button server file
 
 // app.use('/users/:id/edit', toEdit); //link to the to-read category server file
