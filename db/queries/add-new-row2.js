@@ -2,7 +2,7 @@
 const db = require('../connection'); //like the pool variable we often use
 
 const NewRow2 = (arr) => {
-  return db
+  return db //NewRow2 is returning a promise with result.rows. .then() or await the func to get result.rows array to use in other funcs
     .query(`
       INSERT INTO tasks (start_date, name, category_id, end_date)
       VALUES ($1, $2, $3, $4)
