@@ -26,3 +26,8 @@ module.exports = router;
   // } //when u have a bunch of if statements, a return in one if statement will stop the func from running further,
   no return means that the func will continue to read the other if statements
 */
+
+
+const apiSearch = function(url, user_input) {
+
+}
