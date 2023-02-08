@@ -51,3 +51,10 @@ module.exports = router;
   // } //when u have a bunch of if statements, a return in one if statement will stop the func from running further,
   no return means that the func will continue to read the other if statements
 */
+
+//successful responses to show off:
+//to-buy only: cotton-pullover-embroidery-sweatshirt-women
+//to-eat only: arturos-to-go
+//to-read only: sakura
+//to-watch only: supernatural and superman
+//both to-buy and to-read: men-shoes
