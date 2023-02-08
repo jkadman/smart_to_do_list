@@ -7,22 +7,48 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 100% $font-stack;
+  font: $font-stack;
   color: $primary-color;
   background-color: $background-color;
   width: 100%;
-  // margin-top: 0em;
   margin-bottom: 5em;
   height: 120px;
 }
 
-.login {
+.topnav {
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  background-color: white;
+  padding-right: 0em;
+  padding-top: 3em;
+  color: $primary-color;
+  margin-right: 20em;
+  font: $font-stack;
+
 }
 
 #login {
-  margin-right: -50em;
+  color: red;
+  }
+
+a {
+  margin-right: 2em;
 }
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+#something {
+display: flex;
+background-color: yellow;
+align-content: space-between;
+margin-top: 10em;
+}
+
+
+
 
 
