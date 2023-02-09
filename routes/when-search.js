@@ -10,12 +10,12 @@ router.post('/', async (req, res) => {
   console.log('connected to back-end server'); //to show the button's link is connected to its server
   const user_input = req.body.search; //req.body = {search: input} of 'data' in app.js (front-end)
   console.log('user_input:', user_input); //to confirm the user input
-  let nameList = [];
+  let nameList = []; //to response back to the browser the successful result string of each API
 
   //the if statement for Book API
   const newBook = await addingBook.newBook(user_input);
   if (newBook) { //if the task is a book; newBook = { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
-    addingBook.NewRow(newBook, user_input); //adding a row into the database, Book list has an id of 2
+    addingBook.NewRow(newBook, user_input); //add a book row into the database, Book list has an id of 2
     nameList.push('a new row belonging to book list has been added'); //go to DevTools: inspect --> console to see the message
   }
 
@@ -32,14 +32,14 @@ router.post('/', async (req, res) => {
 
   if(resShopApi) {
     arrQuery.push(`1989-06-06`,`${user_input}`, 3, '2022-06-06'); //for product list, product category has an id of 3
-    NewRow2(arrQuery);
+    NewRow2(arrQuery); //add a new row into shopping list
     nameList.push('a new row belonging to product list has been added');
   };
 
   //the if statement used to insert other items into the movie list
   if(nameList.length === 0) {
     arrQuery.push(`1989-06-06`,`${user_input}`, 1, '2022-06-06'); //for movie list, movie category has an id of 1
-    NewRow2(arrQuery);
+    NewRow2(arrQuery); //add a new row into movie list
     nameList.push('a new row belonging to Movie list has been added');
   }
 

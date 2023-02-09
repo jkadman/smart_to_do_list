@@ -1,4 +1,4 @@
-//this file will add a new row for the other 3 APIs categories
+//this file will add a new row for the other 3 APIs categories: shopping, movie and restaurant lists
 const db = require('../connection'); //like the pool variable we often use
 
 const NewRow2 = (arr) => {

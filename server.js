@@ -1,3 +1,4 @@
+//to run the server: npm run local
 // load .env data into process.env
 require('dotenv').config();
 
