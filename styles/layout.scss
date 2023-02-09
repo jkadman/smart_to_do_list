@@ -1,7 +1,7 @@
 // See: https://sass-lang.com/
 
 body {
-  background-color: green;
+  background-color: #373131;
   padding-top: 0em;
 }
 html {
@@ -10,5 +10,36 @@ html {
 
 #search-form {
   margin-top: 10em;
-  background-color: red;
+  background-color: #373131;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
+
+.text {
+  border-radius: 25px;
+  padding-top: 1.2em;
+  margin-top: 5em;
+  position: relative;
+}
+
+
+#submit {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2C74B3;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2em;
+}
+
+#submit:hover {
+  background-color: #29669b;
+}
+
