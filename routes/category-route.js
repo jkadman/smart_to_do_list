@@ -5,12 +5,15 @@ const listBooks = require('../db/queries/list-of-books');
 const listMovies= require('../db/queries/list-of-movies');
 const listRestaurants=require('../db/queries/list-of-restaurants');
 const listProducts = require('../db/queries/list-of-products');
+const deleteTask = require('../db/queries/delete-task');
+
+
 router.get('/:id', (req, res) => {
- // console.log('id:', req.params.id);
+ console.log('id:', req.params.id);
 
 const id=req.params.id;
 
-  if (id===':to-buy') {
+  if (id==='purchase') {
     listProducts().then(tasks=>{
       const templateVars={list:tasks}
       res.render("purchase", templateVars)})
@@ -21,7 +24,7 @@ const id=req.params.id;
 
 
   }
-   if (id===':to-eat') {
+   if (id==='restaurant') {
     listRestaurants().
     then(tasks=>{
 
@@ -34,7 +37,7 @@ const id=req.params.id;
 
   }
 
-   if (id===':Movie') {
+   if (id==='movies') {
     listMovies()
     .then(tasks=>{
       const templateVars={list:tasks}
@@ -47,7 +50,7 @@ const id=req.params.id;
     });
 
   }
-   if (id===':to-read') {
+   if (id==='books') {
     listBooks()
     .then(tasks=>{
       const templateVars={list:tasks}//object list with array of books
@@ -61,5 +64,20 @@ const id=req.params.id;
   }
  // res.render("category-page");
 });
+
+router.post('/:id/delete', (req, res) => {
+
+  console.log('ID', req.params.id);
+  deleteTask(req.params.id)
+  .then(task => {
+  res.send('compeleted');
+})
+.catch(e => {
+  console.error("Other Error",e);
+  res.send(e)
+});
+
+});
+
 
 module.exports = router;
