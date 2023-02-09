@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <title>Smart To-Do-List App</title>
 
@@ -22,14 +19,15 @@
 
 <body>
   <%- include('partials/header') %>
-  <div>Book List</div>
+  <h5>Editing category</h5>
   <div>
-    <span>one task in the list</span>
-
-    <button type="button" class="edit-button">Edit</button>
-
-    
-    <button type="button" class="delete-button">Delete</button>
+    <section>Which category do you want to add the task to?</section>
+      <span>
+        <button type='button' id='1'>Movie List</button>
+        <button type='button' id='2'>Book List</button>
+        <button type='button' id='3'>Shopping List</button>
+        <button type='button' id='4'>Eat-out List</button>
+      </span>
   </div>
 </body>
 

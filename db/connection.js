@@ -11,7 +11,7 @@ const dbParams = {
 };
 
 
-console.log("DB Params",dbParams);
+//console.log("DB Params",dbParams);
 
 
 const db = new Pool(dbParams);

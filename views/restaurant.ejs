@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
 
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Smart To-Do-List App</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+<nav>
+
+  <a href='index.ejs'>HOME</a>
+
+</nav>
+<tbody>
+  <main style="margin: 1em;">
+    <h3>My Restaurant</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Start date</th>
+          <th scope="col">End date</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+
+
+        <% for (let task of list) { %>
+          <tr>
+
+            <td>
+              <%= task.name %>
+            </td>
+            <td>
+              <%= task.start_date %>
+            </td>
+            <td>
+              <%= task.end_date %>
+            </td>
+            <td>
+              <form action="/<%= task.id %>/edit-button">
+                <input type="submit" class="btn btn-default" value="Edit" />
+              </form>
+            </td>
+            <td>
+              <form method="POST" action="/<%= task.id %>/delete"><input type="submit" class="btn btn-default"
+                  value="Delete" /></form>
+            </td>
+          </tr>
+          <% } %>
+
+            </tr>
+
+      </thead>
+    </table>
+
+
+  </main>
+</tbody>
+
 </html>

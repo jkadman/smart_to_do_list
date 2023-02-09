@@ -43,7 +43,6 @@ $.ajax({
     console.log(err);
   }
 })
-
 $.ajax({
     type: 'POST',
     url: 'loginCheck',
@@ -52,10 +51,8 @@ $.ajax({
         console.log('my message' + result);
     }
 });
-
 great e.g. of $.ajax
 https://stackoverflow.com/questions/10214723/jquery-ajax-post-data-in-a-java-servlet
-
 Save some data to the server and notify the user once it's complete.
 $.ajax({
   method: "POST",
@@ -66,4 +63,3 @@ $.ajax({
     alert( "Data Saved: " + msg );
   });
 */
-
