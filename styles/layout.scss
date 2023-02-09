@@ -13,7 +13,7 @@ html {
   display: flex;
   background-color: #4a4545;
   align-content: center;
-  padding-top: 5em;
+  padding-top: 8em;
 }
 
 .text {
@@ -23,7 +23,7 @@ html {
   border: none;
   color: #4a4545;
   font-size: 18px;
-  padding: 15px;
+  padding-top: 1em;
   margin-right: 1em;
   width: 250px;
   transition: all 0.5s;
@@ -38,7 +38,6 @@ html {
   color: #FFFFFF;
   text-align: center;
   font-size: 18px;
-  padding: 15px;
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
