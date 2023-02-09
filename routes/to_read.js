@@ -57,6 +57,32 @@ request4.then((response) => {
 //     if (newArray.length > 0) {
 
 //       console.log('it works!')
+ request1.then((response) => {
+   const result = response.data.results;
+  newArray.push(response.data.results)
+  // categorize(searchQuery2, result, book)
+  // console.log(response.data.results)
+})
+request2.then((response) => {
+  // console.log(response.data.docs)
+  const result = response.data.results;
+     newArray.push(response.data.docs)
+ })
+request3.then((response) => {
+   const result = response.data.name
+//   console.log(result)
+ })
+request4.then((response) => {
+  const result = response.data
+  console.log(result)
+})
+.catch((err) => {
+  console.log(err)
+})
+ .then((response) => {
+    if (newArray.length > 0) {
+
+     console.log('it works!')
 
 //       // console.log(newArray)
 
@@ -66,3 +92,8 @@ request4.then((response) => {
 //     }
 // })
 
+  } else {
+
+      console.log('no beano')
+    }
+})

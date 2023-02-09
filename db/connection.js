@@ -7,10 +7,16 @@ const dbParams = {
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_NAME
+
 };
+
+
+//console.log("DB Params",dbParams);
+
 
 const db = new Pool(dbParams);
 
-db.connect();
+
+db.connect().catch(e=>{console.log('Error database', e)});
 
 module.exports = db;
