@@ -9,18 +9,24 @@ html {
 }
 
 #search-form {
-  margin-top: 10em;
+  position: relative;
+  display: flex;
   background-color: #4a4545;
-  flex-direction: row;
   align-content: center;
-  align-items: center;
+  padding-top: 5em;
 }
 
 .text {
-  border-radius: 25px;
-  padding-top: 1.2em;
-  margin-top: 5em;
-  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  border: none;
+  color: #4a4545;
+  font-size: 18px;
+  padding: 15px;
+  margin-right: 1em;
+  width: 250px;
+  transition: all 0.5s;
 }
 
 
@@ -36,7 +42,6 @@ html {
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 2em;
 }
 
 #submit:hover {
