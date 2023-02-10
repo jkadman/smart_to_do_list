@@ -6,8 +6,6 @@ $button-color: #2f70aa;
 nav {
   padding-top: 0px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   font: $font-stack;
   color: $primary-color;
   background-color: $background-color;
@@ -24,19 +22,23 @@ nav {
   color: $primary-color;
   font: $font-stack;
   height: 120px;
+
 }
 
 
 a {
   margin-top: 2em;
-  align-content: space-between;
+  width: 100%;
+
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
+  width: 100%;
+  justify-content: center;
 }
+
 //search button on header
 .active button {
   margin: 5;
@@ -201,6 +203,110 @@ a {
 
 #something {
   padding-top: 2em;
+}
+
+//Shrinks buttons to fit a smaller screen size
+@media screen and (max-width:828px) {
+  a {
+    margin-top: 2.5em;
+  }
+  #something{
+    padding-top: 2.5em;
+  }
+  .active span {
+    display: flex;
+  }
+  .active button {
+    padding: 8px;
+  }
+  #Reading span {
+    display:flex;
+  }
+  #Reading button {
+    padding: 8px;
+  }
+  #Watching span {
+    display:flex;
+  }
+  #Watching button {
+    padding: 8px;
+  }
+  #Buying span {
+    display:flex;
+  }
+  #Buying button {
+    padding: 8px;
+  }
+  #Eating span {
+    display:flex;
+  }
+  #Eating button {
+    padding: 8px;
+  }
+  button span {
+    display:flex
+  }
+  button#login {
+    padding: 8px;
+  }
+}
+
+//Shrinks buttons to fit even smaller screen
+@media screen and (max-width:642px) {
+  a {
+    margin-top: 2.5em;
+  }
+  #something{
+    padding-top: 2.5em;
+  }
+  .active span {
+    display: flex;
+  }
+  .active button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Reading span {
+    display:flex;
+  }
+  #Reading button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Watching span {
+    display:flex;
+  }
+  #Watching button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Buying span {
+    display:flex;
+  }
+  #Buying button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Eating span {
+    display:flex;
+  }
+  #Eating button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  button span {
+    display:flex
+  }
+  button#login {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
 }
 
 
