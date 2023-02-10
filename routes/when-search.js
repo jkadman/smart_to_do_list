@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
   if(resFoodApi) {
     arrQuery.push(`1989-06-06`,`${user_input}`, 4, '2022-06-06'); //for restaurant list, restaurant category has an id of 4
     NewRow2(arrQuery); //NewRow2 is returning a promise with result.rows. We can .then() or await it to get result.rows array to use in other funcs. But if we wanna run the query inside it only, we can just call it and don't have to .then() or await
+    console.log('a new row has been added to tasks')
     return nameList.push('a new row belonging to restaurant list has been added');
   };
 
@@ -30,6 +31,7 @@ router.post('/', async (req, res) => {
   if(resShopApi) {
     arrQuery.push(`1989-06-06`,`${user_input}`, 3, '2022-06-06'); //for product list, product category has an id of 3
     NewRow2(arrQuery);
+    console.log('a new row has been added to tasks')
     return nameList.push('a new row belonging to product list has been added');
   };
 
@@ -37,6 +39,7 @@ router.post('/', async (req, res) => {
   const newBook = await addingBook.newBook(user_input);
   if (newBook) { //if the task is a book; newBook = { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
     addingBook.NewRow(newBook, user_input); //adding a row into the database, Book list has an id of 2
+    console.log('a new row has been added to tasks')
     return nameList.push('a new row belonging to book list has been added'); //go to DevTools: inspect --> console to see the message
   }
 
@@ -44,6 +47,7 @@ router.post('/', async (req, res) => {
   if(resMovieApi) {
     arrQuery.push(`1989-06-06`,`${user_input}`, 1, '2022-06-06'); //for movie list, movie category has an id of 1
     NewRow2(arrQuery);
+    console.log('a new row has been added to tasks')
     return nameList.push('a new row belonging to Movie list has been added');
   }
 

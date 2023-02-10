@@ -70,7 +70,7 @@ router.post('/:id/delete', (req, res) => {
 
   console.log('ID', req.params.id);
   deleteTask(req.params.id)
-  res.redirect(`/`)
+  res.redirect(`/category/books`)
 });
 
 router.get('/:id/edit', (req, res) => {
