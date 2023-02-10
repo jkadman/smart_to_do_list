@@ -35,7 +35,6 @@ const usersRoutes = require('./routes/users');
 const toEdit = require('./routes/edit-button'); //require the to-read server file
 const toSearch = require('./routes/when-search'); //require the when-search server file
 const toCategory = require('./routes/category-route'); //same category server file for all 4 buttons in the homepage
-const tasks = require('./routes/categories');
 // const deleteRoute = require('./routes/to-delete');
 
 // Mount all resource routes
