@@ -33,18 +33,18 @@ router.post('/', async (req, res) => {
     return nameList.push('a new row belonging to product list has been added');
   };
 
-  //API for movies
-  if(resMovieApi) {
-    arrQuery.push(`1989-06-06`,`${user_input}`, 1, '2022-06-06'); //for movie list, movie category has an id of 1
-    NewRow2(arrQuery);
-    return nameList.push('a new row belonging to Movie list has been added');
-  }
-
   //the if statement for Book API
   const newBook = await addingBook.newBook(user_input);
   if (newBook) { //if the task is a book; newBook = { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
     addingBook.NewRow(newBook, user_input); //adding a row into the database, Book list has an id of 2
     return nameList.push('a new row belonging to book list has been added'); //go to DevTools: inspect --> console to see the message
+  }
+
+  //API for movies
+  if(resMovieApi) {
+    arrQuery.push(`1989-06-06`,`${user_input}`, 1, '2022-06-06'); //for movie list, movie category has an id of 1
+    NewRow2(arrQuery);
+    return nameList.push('a new row belonging to Movie list has been added');
   }
 
   return res.json(nameList);
