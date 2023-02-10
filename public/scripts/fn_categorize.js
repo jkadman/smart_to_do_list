@@ -49,4 +49,4 @@ const categorize = function(searchQuery, category) {
 }
 
 categorize('Moby Dick', 'book')
-module.exports = {categorize};
+module.exports = categorize;
