@@ -4,16 +4,16 @@
   <title>Smart To-Do-List App</title>
   <div class="links">
     <div class="topnav">
-      <a class="active" href="/">Search</a>
-      <a href="/category/books">Reading</a>
-      <a href="/category/purchase">Buying</a>
-      <a href="/category/movies">Movies</a>
-      <a href="/category/restaurant">Eating</a>
+      <a class="active" href="/"><button><span>Search</span></button></a>
+      <a id="Reading" href="/category/books"><button><span>Reading</span></button></a>
+      <a id="Buying" href="/category/purchase"><button><span>Buying</span></button></a>
+      <a id="Watching" href="/category/movies"><button><span>Watching</span></button></a>
+      <a id="Eating" href="/category/restaurant"><button><span>Eating</span></button></a>
     </div>
 
     <div id="something">
     <form method="GET" action="/users" name="username">
-      <button type="submit" id="login">login</button>
+      <button type="submit" id="login"><span>login</span></button>
     </form>
     </div>
   </div>

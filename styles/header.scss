@@ -1,12 +1,11 @@
 $font-stack: Papyrus, sans-serif;
 $primary-color: black;
-$background-color: violet;
+$background-color: #688aab;
+$button-color: #2f70aa;
 
 nav {
   padding-top: 0px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   font: $font-stack;
   color: $primary-color;
   background-color: $background-color;
@@ -18,33 +17,296 @@ nav {
 .topnav {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: $background-color;
   padding-right: 0em;
   color: $primary-color;
-  margin-right: 20em;
   font: $font-stack;
+  height: 120px;
 
 }
 
 
 a {
-  margin-right: 2em;
-  margin-top: 5em;
+  margin-top: 2em;
+  width: 100%;
+
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
+  width: 100%;
+  justify-content: center;
+}
+
+//search button on header
+.active button {
+  margin: 5;
+  background-color: #eab765;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 32px;
+  margin-left: 5px;
+  margin-right: 1em;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.active button:hover {
+  background-color: #e59e2b;
+  box-shadow:
+  0px 0.4px 0.8px rgba(0, 0, 0, 0.019),
+  0px 0.9px 2px rgba(0, 0, 0, 0.03),
+  0px 1.8px 3.8px rgba(0, 0, 0, 0.038),
+  0px 3.1px 6.7px rgba(0, 0, 0, 0.046),
+  0px 5.8px 12.5px rgba(0, 0, 0, 0.056),
+  0px 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/////////////
+///Buttons for the 4 categories
+/////////////
+
+#Reading button {
+  margin: 0;
+  background-color: $button-color;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 32px;
+  margin-left: 5px;
+  margin-right: 1em;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#Reading button:hover {
+  background-color: #29669b;
+  box-shadow:
+  0px 0.4px 0.8px rgba(0, 0, 0, 0.019),
+  0px 0.9px 2px rgba(0, 0, 0, 0.03),
+  0px 1.8px 3.8px rgba(0, 0, 0, 0.038),
+  0px 3.1px 6.7px rgba(0, 0, 0, 0.046),
+  0px 5.8px 12.5px rgba(0, 0, 0, 0.056),
+  0px 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+#Buying button {
+  margin: 0;
+  background-color: $button-color;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 32px;
+  margin-left: 5px;
+  margin-right: 1em;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#Buying button:hover {
+  background-color: #29669b;
+  box-shadow:
+  0px 0.4px 0.8px rgba(0, 0, 0, 0.019),
+  0px 0.9px 2px rgba(0, 0, 0, 0.03),
+  0px 1.8px 3.8px rgba(0, 0, 0, 0.038),
+  0px 3.1px 6.7px rgba(0, 0, 0, 0.046),
+  0px 5.8px 12.5px rgba(0, 0, 0, 0.056),
+  0px 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+#Watching button {
+  margin: 0;
+  background-color: $button-color;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 32px;
+  margin-left: 5px;
+  margin-right: 1em;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#Watching button:hover {
+  background-color: #29669b;
+  box-shadow:
+  0px 0.4px 0.8px rgba(0, 0, 0, 0.019),
+  0px 0.9px 2px rgba(0, 0, 0, 0.03),
+  0px 1.8px 3.8px rgba(0, 0, 0, 0.038),
+  0px 3.1px 6.7px rgba(0, 0, 0, 0.046),
+  0px 5.8px 12.5px rgba(0, 0, 0, 0.056),
+  0px 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+#Eating button {
+  margin: 0;
+  background-color: $button-color;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 32px;
+  margin-left: 5px;
+  margin-right: 1em;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#Eating button:hover {
+  background-color: #29669b;
+  box-shadow:
+  0px 0.4px 0.8px rgba(0, 0, 0, 0.019),
+  0px 0.9px 2px rgba(0, 0, 0, 0.03),
+  0px 1.8px 3.8px rgba(0, 0, 0, 0.038),
+  0px 3.1px 6.7px rgba(0, 0, 0, 0.046),
+  0px 5.8px 12.5px rgba(0, 0, 0, 0.056),
+  0px 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+//login button on header
+#something button {
+  margin: 0;
+  background-color: #eab765;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 32px;
+  margin-left: 5px;
+  margin-right: 1em;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#something button:hover {
+  background-color: #e59e2b;
+  box-shadow:
+  0px 0.4px 0.8px rgba(0, 0, 0, 0.019),
+  0px 0.9px 2px rgba(0, 0, 0, 0.03),
+  0px 1.8px 3.8px rgba(0, 0, 0, 0.038),
+  0px 3.1px 6.7px rgba(0, 0, 0, 0.046),
+  0px 5.8px 12.5px rgba(0, 0, 0, 0.056),
+  0px 14px 30px rgba(0, 0, 0, 0.08);
 }
 
 #something {
-  color: red;
-display: flex;
-background-color: yellow;
+  padding-top: 2em;
+}
 
-align-content: space-between;
-margin-top: 2em;
+//Shrinks buttons to fit a smaller screen size
+@media screen and (max-width:828px) {
+  a {
+    margin-top: 2.5em;
+  }
+  #something{
+    padding-top: 2.5em;
+  }
+  .active span {
+    display: flex;
+  }
+  .active button {
+    padding: 8px;
+  }
+  #Reading span {
+    display:flex;
+  }
+  #Reading button {
+    padding: 8px;
+  }
+  #Watching span {
+    display:flex;
+  }
+  #Watching button {
+    padding: 8px;
+  }
+  #Buying span {
+    display:flex;
+  }
+  #Buying button {
+    padding: 8px;
+  }
+  #Eating span {
+    display:flex;
+  }
+  #Eating button {
+    padding: 8px;
+  }
+  button span {
+    display:flex
+  }
+  button#login {
+    padding: 8px;
+  }
+}
+
+//Shrinks buttons to fit even smaller screen
+@media screen and (max-width:642px) {
+  a {
+    margin-top: 2.5em;
+  }
+  #something{
+    padding-top: 2.5em;
+  }
+  .active span {
+    display: flex;
+  }
+  .active button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Reading span {
+    display:flex;
+  }
+  #Reading button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Watching span {
+    display:flex;
+  }
+  #Watching button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Buying span {
+    display:flex;
+  }
+  #Buying button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  #Eating span {
+    display:flex;
+  }
+  #Eating button {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
+  button span {
+    display:flex
+  }
+  button#login {
+    padding: 5px;
+    margin-left: 2.5px;
+    margin-right: .5em;
+  }
 }
 #login {
   margin-right: -50em;
