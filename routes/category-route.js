@@ -66,18 +66,16 @@ const id=req.params.id;
 });
 
 router.post('/:id/delete', (req, res) => {
+  id = req.params.id
 
   console.log('ID', req.params.id);
   deleteTask(req.params.id)
-  .then(task => {
-  res.send('compeleted');
-})
-.catch(e => {
-  console.error("Other Error",e);
-  res.send(e)
+  res.redirect(`/`)
 });
 
-});
+router.get('/:id/edit', (req, res) => {
+
+})
 
 
 module.exports = router;
