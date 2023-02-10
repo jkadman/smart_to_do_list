@@ -4,7 +4,7 @@ const listBooks = function() {
 
   return db
 
-    .query(`SELECT * FROM tasks WHERE category_id = 2`)
+    .query(`SELECT * FROM tasks WHERE category_id = 2 LIMIT 10;`)
 
     .then((result) => {
       console.log(result.rows);//my books
