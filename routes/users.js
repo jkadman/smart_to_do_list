@@ -5,26 +5,28 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
+
 const express = require('express');
 const router  = express.Router();
+const deleteTask = require('../db/queries/delete-task');
 
-
-
-
+//set cookie
 router.get('/', (req, res) => {
 
   res.cookie('user_id', '1');
 
-
-
-  // send the user somewhere
   res.redirect('/');
 });
 
-// router.get('/', (req, res) => {
+// delete user task
+router.post('/:id/delete', (req, res) => {
 
-//   res.render('index');1
-// });
+  deleteTask(req.params.id)
+
+  .catch(e => {
+    console.error(e);
+  });
+});
 
 
 
