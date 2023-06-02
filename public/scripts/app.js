@@ -11,7 +11,6 @@ $(() => {
       data: {search: input}, //'data' key only works with object-typed key value. Data's key value = the req.body in the server
       success: function(result) {
         console.log('app.js:' + result); //result in AJAX = the value in res.send(value) sent back from the server.
-        console.log('a new row has been added to tasks')
           //Value could be an obj, array, or a string => could be utilized to create if statements to direct the browser to different pages!!
         // window.location.href = 'http://localhost:8080/api/users'; //redirect the user to the /api/users page if the request was sent successfully
       },
