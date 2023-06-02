@@ -56,13 +56,3 @@ router.post('/', async (req, res) => {
 
 module.exports = router;
 
-//below is my own note, don't bother reading it
-//'await' is always used for any func that returns a promise, to resolve the promise and get back either its right output or undefined (an error occurred)
-/* if (movie api) {
-  //   return res.redirect('http://localhost:8080/api/users')
-  // } //when u have a bunch of if statements, a return in one if statement will stop the func from running further,
-  no return means that the func will continue to read the other if statements
-
-  return res.json(nameList); //res.json can return an array or an object // = how to response different messages under diffe conditions
-    //DevTools: inspect --> network --> Fetch/XHR --> reponse (u'll see msg: "a new row belonging to book list has been added")
-*/
