@@ -2,10 +2,11 @@ const express = require('express');
 const router  = express.Router();
 
 const addingBook = require('../db/queries/add-new-book'); //import book-api-testing func and add-new-book-row func
-const FoodApi = require('../db/queries/toEat-api'); //import FoodApi func to test
-const ShopApi = require('../db/queries/toBuy-api'); //import ShopApi func to test
-const movieApi = require('../db/queries/towatch-api');
+// const FoodApi = require('../db/queries/toEat-api'); //import FoodApi func to test
+// const ShopApi = require('../db/queries/toBuy-api'); //import ShopApi func to test
+// const movieApi = require('../db/queries/towatch-api');
 const NewRow2 = require('../db/queries/add-new-row2'); //import adding-new-row func for the other 3 APIs
+const { bookAPI, movieApi, foodApi, shopApi } = require('../API/api-calls.js')
 
 router.post('/', async (req, res) => {
   console.log('connected to back-end server'); //to show the button's link is connected to its server
@@ -15,8 +16,8 @@ router.post('/', async (req, res) => {
 
   //the if statements for Food API and shopping API
   let arrQuery = [];
-  const resFoodApi = await FoodApi(user_input); //success or undefined
-  const resShopApi = await ShopApi(user_input); //success or undefined
+  const resFoodApi = await foodApi(user_input); //success or undefined
+  const resShopApi = await shopApi(user_input); //success or undefined
   const resMovieApi = await movieApi(user_input);
 
   // API for restaurant

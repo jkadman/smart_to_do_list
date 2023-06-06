@@ -8,7 +8,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const deleteTask = require('../db/queries/delete-task');
+const deleteTask = require('../db/queries/dbqueries');
 
 //set cookie
 router.get('/', (req, res) => {
