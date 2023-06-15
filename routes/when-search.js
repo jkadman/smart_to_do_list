@@ -39,7 +39,9 @@ router.post('/', async (req, res) => {
   //the if statement for Book API
   const newBook = await addingBook.newBook(user_input);
   if (newBook) { //if the task is a book; newBook = { title: 'Harry Potter and the Deathly Hallows', pubYear: 2007}
-    addingBook.NewRow(newBook, user_input); //adding a row into the database, Book list has an id of 2
+    // addingBook.NewRow(newBook, user_input);
+    arrQuery.push(`1989-06-06`, `${user_input}`, 2, `2022-06-06`)
+    NewRow2(arrQuery)
     console.log('a new row has been added to tasks')
     return nameList.push('a new row belonging to book list has been added'); //go to DevTools: inspect --> console to see the message
   }

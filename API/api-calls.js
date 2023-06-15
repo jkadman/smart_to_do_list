@@ -22,6 +22,7 @@ const bookAPI = async (input) => {
 const movieApi = async (input) => {
   try {
     const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=a3a238db7e3932463061304b7f22746a&query=${input}`); //success or undefined
+    // console.log('test:', response.data.results[0])
     console.log('result of MovieDB func:', response.data.results[0].original_title);
     return response.data.results[0].original_title;
   }
